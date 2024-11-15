@@ -1,0 +1,126 @@
+:root {
+	--cell-size: 100px;
+	--color: #81c3fd; /* for hover */
+	--color-set: #0275d8; /* when set */
+	--l: 10px; /* X line-width */
+  }
+  
+  body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f3a2b9;
+	background-image: url(2117740.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+  }
+  
+  .board {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5px;
+  }
+  
+  .cell {
+	width: var(--cell-size);
+	height: var(--cell-size);
+	border: 2px outset #333;
+	background-color: #c24ed4a2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	font-size: 3rem;
+	text-align: center;
+	position: relative;
+  }
+  
+  .cell.x::before {
+	content: 'X';
+	font-size: 3rem;
+	color: #d9534f; /* red color for X */
+  }
+  
+  .cell.circle::before {
+	content: 'O';
+	font-size: 3rem;
+	color: #0275d8; /* blue color for O */
+  }
+  
+  .winning-message {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 2rem;
+	flex-direction: column;
+  }
+  
+  .winning-message.show {
+	display: flex;
+  }
+  
+  .winning-message button {
+	background-color: white;
+	color: #63c7f1;
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.5rem;
+  }
+  
+  .winning-message button:hover {
+	background-color: #0275d8;
+	color: white;
+  }
+  
+  /* Hover effect for player turns */
+  .board.x .cell:hover {
+	background-color: rgba(255, 0, 0, 0.3);
+  }
+  
+  .board.circle .cell:hover {
+	background-color: rgba(0, 123, 255, 0.3);
+  }
+
+h1 {
+	font-size: medium;
+	font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+  font-size: 64px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff6ec7; /* Light pink color for text */
+  letter-spacing: 3px;
+  text-shadow: 
+    2px 2px 0px #000000,   /* Black shadow for depth */
+    4px 4px 5px rgba(0, 0, 0, 0.4),  /* Softer black shadow */
+    0 0 15px #00aaff,      /* Light blue glowing effect */
+    0 0 30px #00aaff,      /* Light blue glowing effect */
+    0 0 45px #00aaff,      /* Stronger blue glow */
+    0 0 60px #00aaff;
+}
+
+.score-board {
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+	color: #fff;
+  }
+  
+  .score-board div {
+	margin: 10px 0;
+  }
+  
+  .score-board span {
+	font-weight: bold;
+  }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="tiktack.css">
+ <title>Tic-Tac-Toe - CodeBrainer</title>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    
+    <div class="score-board">
+        <div>
+            <span>Player 1 (X): </span><span id="score-x">0</span>
+        </div>
+        <div>
+            <span>Player 2 (O): </span><span id="score-o">0</span>
+    </div>
+
+    <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+    <div class="winning-message" id="winningMessage">
+        <div id="winningMessageText"></div>
+        <button id="restartButton">Restart</button>
+    </div>
+
+    <script src="tiktack.js" defer></script>
+</body>
+</html>
